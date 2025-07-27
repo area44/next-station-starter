@@ -23,15 +23,15 @@
     "cobe": "^0.6.4",
     "geist": "^1.4.2",
     "glob": "^11.0.3",
-    "lucide-react": "^0.525.0",
-    "next": "^15.4.2",
+    "lucide-react": "^0.526.0",
+    "next": "^15.4.4",
     "postcss": "^8.5.6",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "sharp": "^0.34.3",
     "tailwind-merge": "^3.3.1",
     "tailwindcss": "^4.1.11",
-    "tw-animate-css": "^1.3.5"
+    "tw-animate-css": "^1.3.6"
   },
   "devDependencies": {
     "@area44/biome-config": "^2.2.5",
