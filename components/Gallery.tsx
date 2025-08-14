@@ -21,17 +21,14 @@ type ImageMetadata = {
 async function fetchImageMetadata(pattern: string): Promise<ImageMetadata[]> {
   try {
     const files = glob.sync(pattern, { posix: true });
+
     const imagePromises = files.map(async (file) => {
       try {
-        const src = file.replace("public", "");
+        const src = file.replace(/^public/, "");
         const image = sharp(file);
         const metadata = await image.metadata();
-        if (
-          !metadata ||
-          !metadata.width ||
-          !metadata.height ||
-          !metadata.format
-        ) {
+
+        if (!metadata?.width || !metadata?.height || !metadata.format) {
           throw new Error(`Incomplete metadata for ${file}`);
         }
 
@@ -40,13 +37,11 @@ async function fetchImageMetadata(pattern: string): Promise<ImageMetadata[]> {
           .clone()
           .resize(10, 10, { fit: "inside" })
           .toBuffer();
-        const base64 = `data:image/${mimeType};base64,${buffer.toString("base64")}`;
-        return {
-          src,
-          width: metadata.width,
-          height: metadata.height,
-          base64,
-        };
+        const base64 = `data:image/${mimeType};base64,${buffer.toString(
+          "base64"
+        )}`;
+
+        return { src, width: metadata.width, height: metadata.height, base64 };
       } catch (err) {
         console.warn(`Skipping image ${file}:`, err);
         return null;
@@ -69,7 +64,7 @@ const Gallery = async () => {
 
   if (!images.length) {
     return (
-      <p className="text-muted-foreground text-center py-10">
+      <p className="col-span-full py-10 text-center text-muted-foreground">
         No images found in the gallery.
       </p>
     );
@@ -77,28 +72,33 @@ const Gallery = async () => {
 
   return images.map(({ src, height, width, base64 }) => {
     const altText =
-      src.split("/").pop()?.replace(/\..+$/, "").replace(/[-_]/g, " ").trim() ||
-      "Gallery image";
+      src
+        .split("/")
+        .pop()
+        ?.replace(/\..+$/, "")
+        .replace(/[-_]/g, " ")
+        .replace(/\b\w/g, (char) => char.toUpperCase())
+        .trim() || "Gallery image";
 
     return (
       <Dialog key={src}>
         <DialogTrigger asChild>
           <AspectRatio
             ratio={3 / 2}
-            className="group relative cursor-zoom-in overflow-hidden rounded-lg after:pointer-events-none after:absolute after:inset-0"
+            className="group relative cursor-zoom-in overflow-hidden rounded-lg"
           >
             <Image
               src={src}
               placeholder="blur"
               blurDataURL={base64}
               alt={altText}
-              className="object-cover transition will-change-auto group-hover:scale-110"
+              className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
               fill
               loading="lazy"
             />
           </AspectRatio>
         </DialogTrigger>
-        <DialogContent className="rounded-lg p-0">
+        <DialogContent className="p-0 flex items-center justify-center">
           <VisuallyHidden>
             <DialogTitle>{altText}</DialogTitle>
           </VisuallyHidden>
@@ -109,7 +109,7 @@ const Gallery = async () => {
             height={height}
             width={width}
             alt={altText}
-            className="rounded-lg object-cover lg:h-lvh md:h-lvh sm:w-lvh"
+            className="rounded-lg object-contain w-full h-full"
             loading="lazy"
           />
         </DialogContent>
