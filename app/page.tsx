@@ -2,7 +2,7 @@ import Link from "next/link";
 
 import Cobe from "@/components/Cobe";
 import Gallery from "@/components/Gallery";
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/lib/config";
 
 export default function Home() {
   return (

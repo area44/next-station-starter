@@ -4,7 +4,7 @@ import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {

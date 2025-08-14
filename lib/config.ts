@@ -3,7 +3,7 @@ export const siteConfig = {
   url: "https://next-station-starter.vercel.app",
   description: "An image gallery starter built with Next.js.",
   links: {
-    github: "https://github.com/AREA44/next-station-starter",
+    github: "https://github.com/area44/next-station-starter",
   },
 };
 
