@@ -39,8 +39,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" className="dark">
       <body
         className={cn(
-          "dark min-h-screen bg-background font-sans antialiased",
-          `${GeistSans.variable} ${GeistMono.variable}`
+          "dark min-h-screen bg-background font-sans antialiased flex flex-col",
+          GeistSans.variable,
+          GeistMono.variable
         )}
       >
         {children}
