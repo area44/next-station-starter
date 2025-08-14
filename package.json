@@ -1,6 +1,6 @@
 {
   "name": "@area44/next-station-starter",
-  "version": "25.04.18",
+  "version": "25.08.14",
   "private": true,
   "description": "An image gallery starter built with Next.js",
   "author": "AREA44",
@@ -8,7 +8,7 @@
     "build": "next build --turbopack",
     "dev": "next dev --turbopack",
     "start": "next start --turbopack",
-    "format": "biome format --write .",
+    "format": "biome format . --write",
     "lint": "biome lint . --write",
     "check": "biome check . --write"
   },
