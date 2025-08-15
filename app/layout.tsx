@@ -4,7 +4,7 @@ import { GeistMono } from "geist/font/mono";
 import { GeistSans } from "geist/font/sans";
 import type { Metadata } from "next";
 
-import { siteConfig } from "@/config/site";
+import { siteConfig } from "@/lib/config";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -39,8 +39,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" className="dark">
       <body
         className={cn(
-          "dark min-h-screen bg-background font-sans antialiased",
-          `${GeistSans.variable} ${GeistMono.variable}`
+          "dark min-h-screen bg-background font-sans antialiased flex flex-col text-foreground",
+          GeistSans.variable,
+          GeistMono.variable
         )}
       >
         {children}

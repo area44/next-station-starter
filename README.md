@@ -4,7 +4,7 @@ Next Station Starter is an image gallery starter built with [Next.js](https://ne
 
 ## Running Locally
 
-To run the application locally, make sure you have Node.js v18+ installed on your machine.
+To run the application locally, make sure you have Node.js v22+ installed on your machine.
 
 ```bash
 git clone https://github.com/AREA44/next-station-starter
