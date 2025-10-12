@@ -24,8 +24,8 @@
     "cobe": "^0.6.5",
     "geist": "^1.5.1",
     "glob": "^11.0.3",
-    "lucide-react": "^0.544.0",
-    "next": "^16.0.0-beta.0",
+    "lucide-react": "^0.545.0",
+    "next": "^16.0.0-canary.2",
     "postcss": "^8.5.6",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
@@ -37,7 +37,7 @@
   "devDependencies": {
     "@area44/biome-config": "^2.2.6",
     "@biomejs/biome": "^2.2.5",
-    "@types/node": "^22.18.8",
+    "@types/node": "^22.18.10",
     "@types/react": "^19.2.2",
     "@types/react-dom": "^19.2.1",
     "typescript": "^5.9.3"
