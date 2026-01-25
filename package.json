@@ -13,10 +13,7 @@
     "check": "biome check --write"
   },
   "dependencies": {
-    "@radix-ui/react-aspect-ratio": "^1.1.8",
-    "@radix-ui/react-dialog": "^1.1.15",
-    "@radix-ui/react-slot": "^1.2.4",
-    "@radix-ui/react-visually-hidden": "^1.2.4",
+    "@base-ui/react": "^1.1.0",
     "@tailwindcss/postcss": "^4.1.18",
     "babel-plugin-react-compiler": "^1.0.0",
     "class-variance-authority": "^0.7.1",
@@ -29,6 +26,7 @@
     "postcss": "^8.5.6",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
+    "shadcn": "^3.7.0",
     "sharp": "^0.34.5",
     "tailwind-merge": "^3.4.0",
     "tailwindcss": "^4.1.18",
