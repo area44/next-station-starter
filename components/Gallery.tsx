@@ -1,4 +1,3 @@
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { glob } from "glob";
 import Image from "next/image";
 import sharp from "sharp";
@@ -82,7 +81,7 @@ const Gallery = async () => {
 
     return (
       <Dialog key={src}>
-        <DialogTrigger asChild>
+        <DialogTrigger>
           <AspectRatio
             ratio={3 / 2}
             className="group relative cursor-zoom-in overflow-hidden rounded-lg"
@@ -99,9 +98,7 @@ const Gallery = async () => {
           </AspectRatio>
         </DialogTrigger>
         <DialogContent className="p-0 flex items-center justify-center">
-          <VisuallyHidden>
-            <DialogTitle>{altText}</DialogTitle>
-          </VisuallyHidden>
+          <DialogTitle>{altText}</DialogTitle>
           <Image
             src={src}
             placeholder="blur"
