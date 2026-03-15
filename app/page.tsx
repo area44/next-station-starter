@@ -1,6 +1,6 @@
+import { Earth } from "lucide-react";
 import Link from "next/link";
 
-import Cobe from "@/components/Cobe";
 import Gallery from "@/components/Gallery";
 import { siteConfig } from "@/lib/config";
 
@@ -11,19 +11,19 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
           {/* Hero / Intro Card */}
           <div className="relative col-span-1 row-span-3 flex flex-col items-center justify-end gap-4 overflow-hidden rounded-lg border bg-card px-6 pb-16 pt-64 text-center text-balance sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:pt-0 after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
-            {/* Background Globe + Gradient Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-30">
+            {/* Background Earth Icon + Gradient Overlay */}
+            <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
               <span className="flex max-h-full max-w-full items-center justify-center">
-                <Cobe />
+                <Earth className="w-[150%] h-[150%] stroke-[0.5] shrink-0" />
               </span>
               <span className="absolute inset-x-0 bottom-0 h-[400px] bg-linear-to-b from-card/0 via-card to-card" />
             </div>
 
             {/* Title & Description */}
-            <h1 className="scroll-m-20 text-4xl font-extrabold uppercase tracking-tight lg:text-5xl">
+            <h1 className="relative z-10 scroll-m-20 text-4xl font-extrabold uppercase tracking-tight lg:text-5xl">
               {siteConfig.name}
             </h1>
-            <p className="text-xl text-muted-foreground">
+            <p className="relative z-10 text-xl text-muted-foreground">
               {siteConfig.description}
             </p>
           </div>
