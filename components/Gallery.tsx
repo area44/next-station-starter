@@ -97,7 +97,10 @@ const Gallery = async () => {
             />
           </AspectRatio>
         </DialogTrigger>
-        <DialogContent className="p-0 flex items-center justify-center">
+        <DialogContent
+          className="max-w-[95vw] max-h-[95vh] border-none bg-transparent p-0 shadow-none sm:max-w-[95vw] flex items-center justify-center"
+          showCloseButton={false}
+        >
           <span className="sr-only">
             <DialogTitle>{altText}</DialogTitle>
           </span>
@@ -108,7 +111,7 @@ const Gallery = async () => {
             height={height}
             width={width}
             alt={altText}
-            className="rounded-lg object-contain w-full h-full"
+            className="h-auto w-auto max-h-[90vh] max-w-full rounded-lg object-contain"
             loading="lazy"
           />
         </DialogContent>
