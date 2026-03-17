@@ -97,7 +97,7 @@ const Gallery = async () => {
           </div>
         </DialogTrigger>
         <DialogContent
-          className="max-w-[95vw] max-h-[95vh] border-none bg-transparent p-0 shadow-none sm:max-w-[95vw] flex items-center justify-center"
+          className="w-auto h-auto max-w-[95vw] max-h-[95vh] border-none bg-transparent p-0 shadow-none sm:max-w-[95vw] flex items-center justify-center"
           showCloseButton={false}
         >
           <span className="sr-only">
