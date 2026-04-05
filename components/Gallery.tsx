@@ -2,7 +2,6 @@ import { glob } from "glob";
 import Image from "next/image";
 import sharp from "sharp";
 
-import { AspectRatio } from "@/components/ui/aspect-ratio";
 import {
   Dialog,
   DialogContent,
@@ -82,22 +81,25 @@ const Gallery = async () => {
     return (
       <Dialog key={src}>
         <DialogTrigger render={<div />}>
-          <AspectRatio
-            ratio={3 / 2}
-            className="group relative cursor-zoom-in overflow-hidden rounded-lg"
-          >
+          <div className="group relative cursor-zoom-in overflow-hidden rounded-xl border bg-card shadow-sm transition-all hover:shadow-md aspect-3/2">
             <Image
               src={src}
               placeholder="blur"
               blurDataURL={base64}
               alt={altText}
-              className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+              className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
               fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 33vw"
               loading="lazy"
             />
-          </AspectRatio>
+            {/* Overlay for aesthetic */}
+            <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+          </div>
         </DialogTrigger>
-        <DialogContent className="p-0 flex items-center justify-center">
+        <DialogContent
+          className="w-auto h-auto max-w-[95vw] max-h-[95vh] border-none bg-transparent p-0 shadow-none sm:max-w-[95vw] flex items-center justify-center"
+          showCloseButton={false}
+        >
           <span className="sr-only">
             <DialogTitle>{altText}</DialogTitle>
           </span>
@@ -108,7 +110,7 @@ const Gallery = async () => {
             height={height}
             width={width}
             alt={altText}
-            className="rounded-lg object-contain w-full h-full"
+            className="h-auto w-auto max-h-[90vh] max-w-full rounded-xl object-contain shadow-2xl"
             loading="lazy"
           />
         </DialogContent>

@@ -10,22 +10,30 @@ export default function Home() {
       <main className="flex-1 mx-auto max-w-[1960px] p-4">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
           {/* Hero / Intro Card */}
-          <div className="relative col-span-1 row-span-3 flex flex-col items-center justify-end gap-4 overflow-hidden rounded-lg border bg-card px-6 pb-16 pt-64 text-center text-balance sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:pt-0 after:pointer-events-none after:absolute after:inset-0 after:rounded-lg">
-            {/* Background Earth Icon + Gradient Overlay */}
-            <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
-              <span className="flex max-h-full max-w-full items-center justify-center">
-                <Earth className="w-[150%] h-[150%] stroke-[0.5] shrink-0" />
-              </span>
-              <span className="absolute inset-x-0 bottom-0 h-[400px] bg-linear-to-b from-card/0 via-card to-card" />
+          <div className="relative col-span-1 row-span-3 flex flex-col items-center justify-end gap-6 overflow-hidden rounded-xl border bg-card px-8 pb-20 pt-72 text-center text-balance sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:pt-0 shadow-sm transition-all hover:shadow-md">
+            {/* Decorative Background */}
+            <div className="absolute inset-0 pointer-events-none overflow-hidden">
+              {/* Earth Icon with subtle rotation/float effect in CSS if I could, but let's stick to simple first */}
+              <div className="absolute inset-0 flex items-center justify-center opacity-[0.15]">
+                <Earth className="w-[300%] h-[300%] stroke-[0.3] shrink-0 blur-[2px]" />
+              </div>
+              {/* Radial gradient to create depth */}
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_transparent_0%,_var(--card)_80%)]" />
+              {/* Subtle accent glow */}
+              <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
+              <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
             </div>
 
             {/* Title & Description */}
-            <h1 className="relative z-10 scroll-m-20 text-4xl font-extrabold uppercase tracking-tight lg:text-5xl">
-              {siteConfig.name}
-            </h1>
-            <p className="relative z-10 text-xl text-muted-foreground">
-              {siteConfig.description}
-            </p>
+            <div className="relative z-10 space-y-4">
+              <h1 className="scroll-m-20 text-4xl font-black uppercase tracking-tighter lg:text-6xl text-foreground drop-shadow-sm">
+                {siteConfig.name}
+              </h1>
+              <div className="h-1 w-20 bg-primary mx-auto rounded-full" />
+              <p className="text-xl text-muted-foreground font-medium leading-relaxed">
+                {siteConfig.description}
+              </p>
+            </div>
           </div>
 
           {/* Image Gallery */}
@@ -34,14 +42,16 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t py-6 md:px-8 flex items-center justify-center w-full">
+      <footer className="border-t py-8 md:px-8 flex items-center justify-center w-full bg-muted/30">
         <p className="text-center text-sm leading-loose text-muted-foreground">
-          Built by AREA44. The source code is available on{" "}
+          Built with ♥ by{" "}
+          <span className="font-semibold text-foreground">AREA44</span>. Source
+          on{" "}
           <Link
             href={siteConfig.links.github}
             target="_blank"
             rel="noreferrer"
-            className="font-medium underline underline-offset-4"
+            className="font-medium underline underline-offset-4 hover:text-primary transition-colors"
           >
             GitHub
           </Link>

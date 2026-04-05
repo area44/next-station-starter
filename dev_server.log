@@ -1,0 +1,16 @@
+
+> @area44/next-station-starter@25.08.14 dev /app
+> next dev --port 3005
+
+⨯ Failed to start server
+Error: listen EADDRINUSE: address already in use :::3005
+    at <unknown> (Error: listen EADDRINUSE: address already in use :::3005)
+    at new Promise (<anonymous>) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '::',
+  port: 3005
+}
+[?25h
+ ELIFECYCLE  Command failed with exit code 1.
