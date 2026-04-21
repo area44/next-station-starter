@@ -10,31 +10,38 @@ export function HanoiLogo(props: SVGProps<SVGSVGElement>) {
       xmlns="http://www.w3.org/2000/svg"
       {...props}
     >
-      <path d="M20 5L24 10H16L20 5Z" fill="currentColor" />
-      <rect x="15" y="10" width="10" height="2" fill="currentColor" />
-      <rect x="12" y="12" width="16" height="4" fill="currentColor" />
+      {/* Top Roof tier */}
+      <path d="M20 4L26 9H14L20 4Z" fill="currentColor" />
+      {/* Second Roof tier */}
+      <path d="M12 11H28L30 15H10L12 11Z" fill="currentColor" />
+      {/* Main Structure Frame */}
       <rect
-        x="14"
-        y="16"
-        width="12"
+        x="13"
+        y="15"
+        width="14"
         height="12"
-        stroke="currentColor"
-        strokeWidth="2.5"
-        fill="none"
+        fill="currentColor"
+        fillOpacity="0.1"
       />
-      <circle
-        cx="20"
-        cy="22"
-        r="3"
-        stroke="currentColor"
-        strokeWidth="2"
-        fill="none"
+      <path
+        d="M13 15H27V27H13V15ZM15 17V25H25V17H15Z"
+        fill="currentColor"
+        fillRule="evenodd"
+        clipRule="evenodd"
       />
-      <path d="M14 22H17" stroke="currentColor" strokeWidth="2" />
-      <path d="M23 22H26" stroke="currentColor" strokeWidth="2" />
-      <path d="M20 19V25" stroke="currentColor" strokeWidth="2" />
-      <rect x="12" y="28" width="16" height="2" fill="currentColor" />
-      <rect x="10" y="30" width="20" height="5" fill="currentColor" />
+      {/* Circular Window */}
+      <circle cx="20" cy="21" r="3.5" stroke="currentColor" strokeWidth="1.5" />
+      <path
+        d="M16.5 21H18.5M21.5 21H23.5M20 17.5V19.5M20 22.5V24.5"
+        stroke="currentColor"
+        strokeWidth="1"
+        strokeLinecap="round"
+      />
+      {/* Pillars */}
+      <rect x="13" y="27" width="2" height="9" fill="currentColor" />
+      <rect x="25" y="27" width="2" height="9" fill="currentColor" />
+      {/* Base */}
+      <rect x="10" y="34" width="20" height="2" fill="currentColor" />
     </svg>
   );
 }
