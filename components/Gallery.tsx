@@ -25,17 +25,16 @@ async function fetchImageMetadata(pattern: string): Promise<ImageMetadata[]> {
       try {
         const src = file.replace(/^public/, "");
         const image = sharp(file);
-        const metadata = await image.metadata();
+        const [metadata, buffer] = await Promise.all([
+          image.metadata(),
+          image.clone().resize(10, 10, { fit: "inside" }).toBuffer(),
+        ]);
 
         if (!metadata?.width || !metadata?.height || !metadata.format) {
           throw new Error(`Incomplete metadata for ${file}`);
         }
 
         const mimeType = metadata.format === "jpeg" ? "jpg" : metadata.format;
-        const buffer = await image
-          .clone()
-          .resize(10, 10, { fit: "inside" })
-          .toBuffer();
         const base64 = `data:image/${mimeType};base64,${buffer.toString(
           "base64"
         )}`;
@@ -93,6 +92,7 @@ const Gallery = async () => {
               alt={altText}
               className="object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
               fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, (max-width: 1536px) 33vw, 25vw"
               loading="lazy"
             />
           </AspectRatio>

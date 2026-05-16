@@ -6,7 +6,7 @@ export default function NotFound() {
     <section className="flex min-h-screen flex-col items-center justify-center px-4 text-center">
       <p className="mb-2 text-sm font-medium text-muted-foreground">404</p>
 
-      <h1 className="scroll-m-20 text-4xl font-bold tracking-tight sm:text-5xl">
+      <h1 className="scroll-m-20 text-4xl font-semibold tracking-tight sm:text-5xl">
         Page Not Found
       </h1>
 

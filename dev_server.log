@@ -1,0 +1,25 @@
+
+> @area44/next-station-starter@25.08.14 dev /app
+> next dev
+
+▲ Next.js 16.2.6 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.0.2:3000
+- Environments: .env
+✓ Ready in 533ms
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+
+○ Compiling / ...
+ HEAD / 200 in 8.9s (next.js: 5.4s, application-code: 3.5s)
+ GET / 200 in 2.7s (next.js: 11ms, application-code: 2.7s)
+[browser] Base UI: A component that acts as a button expected a native <button> because the `nativeButton` prop is true. Rendering a non-<button> removes native button semantics, which can impact forms and accessibility. Use a real <button> in the `render` prop, or set `nativeButton` to `false`.
+    at DialogTrigger (http://localhost:3000/_next/static/chunks/_0l25nwe._.js:201:395)
+    at <anonymous> (about://React/Server/file:///app/.next/dev/server/chunks/ssr/%5Broot-of-the-server%5D__0sn61iy._.js?33:344:447)
+    at Array.map (<anonymous>:1:18)
+    at Gallery (about://React/Server/file:///app/.next/dev/server/chunks/ssr/%5Broot-of-the-server%5D__0sn61iy._.js?30:340:19)
+    at Home (about://React/Server/file:///app/.next/dev/server/chunks/ssr/%5Broot-of-the-server%5D__0sn61iy._.js?2:510:455)
+ GET /non-existent-page 404 in 1135ms (next.js: 830ms, application-code: 306ms)

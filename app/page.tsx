@@ -1,8 +1,13 @@
 import { Earth } from "lucide-react";
+import type { Metadata } from "next";
 import Link from "next/link";
-
 import Gallery from "@/components/Gallery";
 import { siteConfig } from "@/lib/config";
+
+export const metadata: Metadata = {
+  title: siteConfig.name,
+  description: siteConfig.description,
+};
 
 export default function Home() {
   return (
@@ -14,13 +19,13 @@ export default function Home() {
             {/* Background Earth Icon + Gradient Overlay */}
             <div className="absolute inset-0 flex items-center justify-center opacity-10 pointer-events-none">
               <span className="flex max-h-full max-w-full items-center justify-center">
-                <Earth className="w-[150%] h-[150%] stroke-[0.5] shrink-0" />
+                <Earth className="size-[150%] stroke-[0.5] shrink-0" />
               </span>
               <span className="absolute inset-x-0 bottom-0 h-[400px] bg-linear-to-b from-card/0 via-card to-card" />
             </div>
 
             {/* Title & Description */}
-            <h1 className="relative z-10 scroll-m-20 text-4xl font-extrabold uppercase tracking-tight lg:text-5xl">
+            <h1 className="relative z-10 scroll-m-20 text-4xl font-semibold uppercase tracking-tight lg:text-5xl">
               {siteConfig.name}
             </h1>
             <p className="relative z-10 text-xl text-muted-foreground">
