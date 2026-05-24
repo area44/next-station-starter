@@ -13,16 +13,16 @@
     "check": "biome check --write"
   },
   "dependencies": {
-    "@base-ui/react": "^1.4.1",
+    "@base-ui/react": "^1.5.0",
     "@tailwindcss/postcss": "^4.3.0",
     "babel-plugin-react-compiler": "^1.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "geist": "^1.7.0",
+    "geist": "^1.7.1",
     "glob": "^13.0.6",
     "lucide-react": "^1.16.0",
     "next": "^16.2.6",
-    "postcss": "^8.5.14",
+    "postcss": "^8.5.15",
     "react": "^19.2.6",
     "react-dom": "^19.2.6",
     "sharp": "^0.34.5",
@@ -34,7 +34,7 @@
     "@area44/biome-config": "^2.3.4",
     "@biomejs/biome": "^2.4.15",
     "@types/node": "^24.12.4",
-    "@types/react": "^19.2.14",
+    "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
     "typescript": "^6.0.3"
   }
