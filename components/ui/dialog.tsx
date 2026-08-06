@@ -2,36 +2,27 @@
 
 import { Dialog as BaseDialog } from "@base-ui/react/dialog";
 import { XIcon } from "lucide-react";
-import * as React from "react";
+import type * as React from "react";
 
 import { cn } from "@/lib/utils";
 
-function Dialog({ ...props }: React.ComponentProps<typeof BaseDialog.Root>) {
+function Dialog({ ...props }: BaseDialog.Root.Props) {
   return <BaseDialog.Root data-slot="dialog" {...props} />;
 }
 
-function DialogTrigger({
-  ...props
-}: React.ComponentProps<typeof BaseDialog.Trigger>) {
+function DialogTrigger({ ...props }: BaseDialog.Trigger.Props) {
   return <BaseDialog.Trigger data-slot="dialog-trigger" {...props} />;
 }
 
-function DialogPortal({
-  ...props
-}: React.ComponentProps<typeof BaseDialog.Portal>) {
+function DialogPortal({ ...props }: BaseDialog.Portal.Props) {
   return <BaseDialog.Portal data-slot="dialog-portal" {...props} />;
 }
 
-function DialogClose({
-  ...props
-}: React.ComponentProps<typeof BaseDialog.Close>) {
+function DialogClose({ ...props }: BaseDialog.Close.Props) {
   return <BaseDialog.Close data-slot="dialog-close" {...props} />;
 }
 
-function DialogOverlay({
-  className,
-  ...props
-}: React.ComponentProps<typeof BaseDialog.Backdrop>) {
+function DialogOverlay({ className, ...props }: BaseDialog.Backdrop.Props) {
   return (
     <BaseDialog.Backdrop
       data-slot="dialog-overlay"
@@ -52,7 +43,7 @@ function DialogContent({
   children,
   showCloseButton = true,
   ...props
-}: React.ComponentProps<typeof BaseDialog.Popup> & {
+}: BaseDialog.Popup.Props & {
   showCloseButton?: boolean;
 }) {
   return (
@@ -107,10 +98,7 @@ function DialogFooter({ className, ...props }: React.ComponentProps<"div">) {
   );
 }
 
-function DialogTitle({
-  className,
-  ...props
-}: React.ComponentProps<typeof BaseDialog.Title>) {
+function DialogTitle({ className, ...props }: BaseDialog.Title.Props) {
   return (
     <BaseDialog.Title
       data-slot="dialog-title"
@@ -128,7 +116,7 @@ function DialogTitle({
 function DialogDescription({
   className,
   ...props
-}: React.ComponentProps<typeof BaseDialog.Description>) {
+}: BaseDialog.Description.Props) {
   return (
     <BaseDialog.Description
       data-slot="dialog-description"
