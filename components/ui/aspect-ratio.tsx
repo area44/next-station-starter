@@ -1,6 +1,6 @@
 "use client";
 
-import * as React from "react";
+import type * as React from "react";
 
 import { cn } from "@/lib/utils";
 
@@ -17,11 +17,13 @@ function AspectRatio({
   return (
     <div
       data-slot="aspect-ratio"
-      style={{
-        aspectRatio: ratio,
-        ...style,
-      }}
-      className={cn("w-full", className)}
+      style={
+        {
+          "--ratio": ratio,
+          ...style,
+        } as React.CSSProperties
+      }
+      className={cn("aspect-(--ratio) w-full", className)}
       {...props}
     />
   );
