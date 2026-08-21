@@ -31,7 +31,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Credits
 
-Next Station Starter is inspired by the following repositories:
-- [vercel/next.js (with-vercel-blob example)](https://github.com/vercel/next.js/tree/canary/examples/with-vercel-blob)
-- [Image Gallery Starter](https://vercel.com/templates/next.js/image-gallery-starter)
-- [shadcn/ui](https://ui.shadcn.com)
+Next Station Starter is inspired by [vercel/next.js (with-vercel-blob example)](https://github.com/vercel/next.js/tree/canary/examples/with-vercel-blob).
