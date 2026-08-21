@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 
 import Bridge from "@/components/Icons/Bridge";
-import Logo from "@/components/Icons/Logo";
 import type { ImageProps } from "@/lib/types";
 import { useLastViewedPhoto } from "@/lib/useLastViewedPhoto";
 
@@ -31,7 +30,6 @@ export default function GalleryGrid({ images }: { images: ImageProps[] }) {
               </span>
               <span className="absolute bottom-0 left-0 right-0 h-[400px] bg-gradient-to-b from-black/0 via-black to-black" />
             </div>
-            <Logo />
             <h1 className="mb-4 mt-8 text-base font-bold uppercase tracking-widest">
               Next Station Starter
             </h1>
