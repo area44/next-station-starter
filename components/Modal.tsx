@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react";
 
 import SharedModal from "@/components/SharedModal";
 import type { ImageProps } from "@/lib/types";
+import { useLastViewedPhoto } from "@/lib/useLastViewedPhoto";
 
 export default function Modal({
   images,
@@ -17,6 +18,7 @@ export default function Modal({
   const overlayRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const searchParams = useSearchParams();
+  const [, setLastViewedPhoto] = useLastViewedPhoto();
 
   const photoId = searchParams.get("photoId");
   const index = photoId ? Number(photoId) : 0;
@@ -29,6 +31,7 @@ export default function Modal({
   }, [index]);
 
   function handleClose() {
+    setLastViewedPhoto(curIndex.toString());
     router.push("/", { scroll: false });
     onClose?.();
   }
