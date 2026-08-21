@@ -5,7 +5,6 @@ import {
   ArrowLeft,
   ChevronLeft,
   ChevronRight,
-  Download,
   ExternalLink,
   X,
 } from "lucide-react";
@@ -13,9 +12,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
 
-import Twitter from "@/components/Icons/Twitter";
 import { variants } from "@/lib/animationVariants";
-import downloadPhoto from "@/lib/downloadPhoto";
 import type { ImageProps, SharedModalProps } from "@/lib/types";
 
 function range(start: number, end: number) {
@@ -87,7 +84,7 @@ export default function SharedModal({
                   width={navigation ? 1280 : 1920}
                   height={navigation ? 853 : 1280}
                   priority
-                  alt="Next.js Conf image"
+                  alt="Next Station Starter image"
                   onLoad={() => setLoaded(true)}
                 />
               </motion.div>
@@ -125,7 +122,7 @@ export default function SharedModal({
                 </>
               )}
               <div className="absolute right-0 top-0 flex items-center gap-2 p-3 text-white">
-                {navigation ? (
+                {navigation && (
                   <a
                     href={photoUrl}
                     className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
@@ -135,25 +132,7 @@ export default function SharedModal({
                   >
                     <ExternalLink className="h-5 w-5" />
                   </a>
-                ) : (
-                  <a
-                    href={`https://twitter.com/intent/tweet?text=Check%20out%20this%20pic%20from%20Next.js%20Conf!%0A%0Ahttps://nextjsconf-pics.vercel.app/p/${index}`}
-                    className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
-                    target="_blank"
-                    title="Open fullsize version"
-                    rel="noreferrer"
-                  >
-                    <Twitter className="h-5 w-5" />
-                  </a>
                 )}
-                <button
-                  type="button"
-                  onClick={() => downloadPhoto(photoUrl, `${index}.jpg`)}
-                  className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
-                  title="Download fullsize version"
-                >
-                  <Download className="h-5 w-5" />
-                </button>
               </div>
               <div className="absolute left-0 top-0 flex items-center gap-2 p-3 text-white">
                 <button

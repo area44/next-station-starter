@@ -33,11 +33,11 @@ export default function GalleryGrid({ images }: { images: ImageProps[] }) {
             </div>
             <Logo />
             <h1 className="mb-4 mt-8 text-base font-bold uppercase tracking-widest">
-              2022 Event Photos
+              Next Station Starter
             </h1>
             <p className="max-w-[40ch] text-white/75 sm:max-w-[32ch]">
-              Our incredible Next.js community got together in San Francisco for
-              our first ever in-person conference!
+              An image gallery starter built with Next.js App Router and local
+              images.
             </p>
             <a
               className="pointer z-10 mt-6 rounded-lg border border-white bg-white px-3 py-2 text-sm font-semibold text-black transition hover:bg-white/10 hover:text-white md:mt-4"
@@ -57,7 +57,7 @@ export default function GalleryGrid({ images }: { images: ImageProps[] }) {
               className="after:content group relative mb-5 block w-full cursor-zoom-in after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight"
             >
               <Image
-                alt="Next.js Conf photo"
+                alt="Next Station Starter photo"
                 className="transform rounded-lg brightness-90 transition will-change-auto group-hover:brightness-110"
                 style={{ transform: "translate3d(0, 0, 0)" }}
                 placeholder={blurDataUrl ? "blur" : "empty"}
