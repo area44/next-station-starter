@@ -24,14 +24,25 @@ export default function GalleryGrid({ images }: { images: ImageProps[] }) {
     <main className="mx-auto max-w-[1960px] p-4">
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
         {/* Intro Card */}
-        <div className="after:content-[''] relative col-span-1 row-span-3 flex flex-col items-center justify-end gap-4 overflow-hidden rounded-lg border border-white/10 bg-white/5 px-6 pb-16 pt-64 text-center text-white sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:pt-0">
-          <div className="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
+        <div className="after:content-[''] relative col-span-1 row-span-3 flex flex-col items-center justify-end gap-4 overflow-hidden rounded-lg border border-white/10 bg-white/5 px-6 pb-16 pt-64 text-center text-white sm:col-span-2 lg:col-span-1 lg:row-span-2 lg:pt-0 after:pointer-events-none after:absolute after:inset-0 after:rounded-lg after:shadow-highlight">
+          <div className="absolute inset-0 z-0">
+            <Image
+              alt="Bridge background"
+              src="/bridge.jpg"
+              fill
+              priority
+              className="object-cover brightness-50 contrast-125"
+              sizes="(max-width: 640px) 100vw, (max-width: 1280px) 50vw, 25vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+          </div>
+          <div className="relative z-10 flex items-center justify-center opacity-30">
             <HanoiLogo />
           </div>
           <h1 className="relative z-10 text-3xl font-bold uppercase tracking-tight sm:text-4xl">
             {siteConfig.name}
           </h1>
-          <p className="relative z-10 text-muted-foreground text-sm sm:text-base">
+          <p className="relative z-10 text-white/80 text-sm sm:text-base">
             {siteConfig.description}
           </p>
         </div>
