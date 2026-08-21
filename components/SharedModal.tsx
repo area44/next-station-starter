@@ -1,14 +1,7 @@
 "use client";
 
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
-import {
-  ArrowDown,
-  ChevronLeft,
-  ChevronRight,
-  ExternalLink,
-  Share2,
-  X,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight, ExternalLink, X } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
@@ -131,36 +124,6 @@ export default function SharedModal({
                 <ExternalLink className="h-5 w-5" />
               </a>
             )}
-
-            <div className="flex items-center gap-2">
-              <button
-                type="button"
-                onClick={() => {
-                  if (navigator.share) {
-                    navigator
-                      .share({
-                        title: "Photo",
-                        url: window.location.href,
-                      })
-                      .catch(() => {});
-                  } else {
-                    navigator.clipboard.writeText(window.location.href);
-                  }
-                }}
-                className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white cursor-pointer"
-                title="Share photo"
-              >
-                <Share2 className="h-5 w-5" />
-              </button>
-              <a
-                href={`/gallery/${currentImage.public_id}`}
-                download={`${currentImage.public_id}`}
-                className="rounded-full bg-black/50 p-2 text-white/75 backdrop-blur-lg transition hover:bg-black/75 hover:text-white"
-                title="Download photo"
-              >
-                <ArrowDown className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           {/* Previous / Next Arrow Controls */}
