@@ -39,14 +39,6 @@ export default function GalleryGrid({ images }: { images: ImageProps[] }) {
               An image gallery starter built with Next.js App Router and local
               images.
             </p>
-            <a
-              className="pointer z-10 mt-6 rounded-lg border border-white bg-white px-3 py-2 text-sm font-semibold text-black transition hover:bg-white/10 hover:text-white md:mt-4"
-              href="https://vercel.com/new/clone?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-vercel-blob&project-name=nextjs-image-gallery&repository-name=with-vercel-blob&env=BLOB_READ_WRITE_TOKEN&envDescription=Read%2Fwrite%20token%20for%20your%20Vercel%20Blob%20store"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Clone and Deploy
-            </a>
           </div>
           {images.map(({ id, public_id, blurDataUrl }) => (
             <Link
