@@ -21,7 +21,7 @@ To add your own image gallery, simply place your photos inside the `public/galle
 
 ### Change Site Information
 
-To change your site information, update `config/site.ts`. This file contains information about your website's name, description, URL, etc. Update the corresponding values in this file.
+To change your site information, update `lib/config.ts`. This file contains information about your website's name, description, URL, etc. Update the corresponding values in this file.
 
 You can also update the favicon, Open Graph image, and Twitter image in the `app` directory.
 
@@ -31,4 +31,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Credits
 
-Next Station Starter is inspired by the [Image Gallery Starter](https://vercel.com/templates/next.js/image-gallery-starter) and [shadcn/ui](https://ui.shadcn.com) projects.
+Next Station Starter is inspired by [vercel/next.js (with-vercel-blob example)](https://github.com/vercel/next.js/tree/canary/examples/with-vercel-blob).
