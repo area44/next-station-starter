@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "motion";
+import { motion } from "motion/react";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
