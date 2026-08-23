@@ -1,6 +1,5 @@
 "use client";
 
-import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import {
   ArrowLeft,
   ChevronLeft,
@@ -8,6 +7,7 @@ import {
   ExternalLink,
   X,
 } from "lucide-react";
+import { AnimatePresence, MotionConfig, motion } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
 import { useSwipeable } from "react-swipeable";
