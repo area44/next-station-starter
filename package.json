@@ -13,14 +13,14 @@
     "check": "biome check --write"
   },
   "dependencies": {
-    "@base-ui/react": "^1.7.0",
+    "@base-ui/react": "^1.8.0",
     "@tailwindcss/postcss": "^4.3.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "motion": "^13.2.0",
     "geist": "^1.7.2",
     "glob": "^13.0.6",
-    "lucide-react": "^1.40.0",
+    "lucide-react": "^1.41.0",
     "next": "^16.3.4",
     "postcss": "^8.5.28",
     "react": "^19.2.8",
