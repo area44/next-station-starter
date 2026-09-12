@@ -20,7 +20,7 @@
     "motion": "^13.2.0",
     "geist": "^1.7.2",
     "glob": "^13.0.6",
-    "lucide-react": "^1.44.0",
+    "lucide-react": "^1.45.0",
     "next": "^16.3.4",
     "postcss": "^8.5.28",
     "react": "^19.3.0",
