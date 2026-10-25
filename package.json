@@ -17,12 +17,12 @@
     "@tailwindcss/postcss": "^4.3.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "motion": "^14.3.0",
-    "geist": "^1.8.1",
+    "motion": "^14.6.0",
+    "geist": "^1.8.2",
     "glob": "^13.0.6",
-    "lucide-react": "^1.58.0",
-    "next": "^16.4.2",
-    "postcss": "^8.5.30",
+    "lucide-react": "^1.61.0",
+    "next": "^16.4.3",
+    "postcss": "^8.5.31",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "react-hooks-global-state": "^2.1.0",
@@ -33,12 +33,12 @@
   },
   "devDependencies": {
     "@area44/biome-config": "^2.3.4",
-    "@biomejs/biome": "^2.5.15",
+    "@biomejs/biome": "^2.6.3",
     "@types/node": "^24.19.2",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "babel-plugin-react-compiler": "^1.0.0",
     "typescript": "^7.0.2"
   },
-  "packageManager": "pnpm@12.14.0"
+  "packageManager": "pnpm@12.15.0"
 }
