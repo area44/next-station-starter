@@ -20,7 +20,7 @@
     "motion": "^14.14.0",
     "geist": "^1.9.2",
     "glob": "^14.0.6",
-    "lucide-react": "^1.73.0",
+    "lucide-react": "^1.77.0",
     "next": "^16.4.6",
     "postcss": "^8.5.33",
     "react": "^19.3.1",
@@ -28,12 +28,12 @@
     "react-hooks-global-state": "^2.1.0",
     "react-swipeable": "^7.0.2",
     "sharp": "^0.35.5",
-    "tailwind-merge": "^3.7.0",
+    "tailwind-merge": "^3.7.1",
     "tailwindcss": "^4.3.5"
   },
   "devDependencies": {
     "@area44/biome-config": "^2.3.4",
-    "@biomejs/biome": "^2.6.7",
+    "@biomejs/biome": "^2.6.8",
     "@types/node": "^26.6.6",
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
